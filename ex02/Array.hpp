@@ -2,20 +2,25 @@
 # define ARRAY_HPP
 
 # include <iostream>
-# include "Array.tpp"
+# include <stdexcept>
 
 template <typename T>
 class Array
 {
 	private:
-		T*	_tab;
+		T	*_tab;
+		int	_size;
 
 	public:
 		Array();
-		Array(unsigned int n);
 		Array(const Array& cpy);
 		Array&	operator=(const Array& src);
-		int	size(T* tab);
+		Array(int size);
+		~Array();
+		T&	operator[](int	idx);
+		unsigned int	size();
 };
+
+# include "Array.tpp"
 
 #endif

@@ -5,7 +5,7 @@ SRC = main.cpp
 OBJS_DIR = obj
 OBJS = $(SRC:%.cpp=$(OBJS_DIR)/%.o)
 
-NAME = template
+NAME = array
 
 all: $(NAME)
 

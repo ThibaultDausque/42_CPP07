@@ -2,11 +2,26 @@
 
 int	main(void)
 {
-	Array*	test = new Array();
-	Array*	tab(5);
+	Array<int> tab_nb(10);
 
-	std::cout << "--- TESTS ---" << std::endl;
-	std::cout << std::endl;
+	for (unsigned int i = 0; i < tab_nb.size(); i++)
+		tab_nb[i] = i;
 
-	
+	try
+	{
+		std::cout << "--- SIZE ---" << std::endl;
+		std::cout << "tab_nb: " << tab_nb.size() << std::endl;
+		std::cout << std::endl;
+		std::cout << "--- GET A NB ---" << std::endl;
+		std::cout << tab_nb[5] << std::endl;
+		std::cout << std::endl;
+		std::cout << "--- OUT OF RANGE ---" << std::endl;
+		std::cout << tab_nb[11] << std::endl;
+		std::cout << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return 0;
 }
