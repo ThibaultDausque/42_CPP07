@@ -9,11 +9,12 @@ void	elements(T	x)
 	std::cout << x << std::endl;
 }
 
-template <typename T>
-void	iter(T* tab, int len, void (elements)(T))
+template <typename T, typename F>
+void	iter(T* tab, unsigned int len, F function)
 {
-	for (int i = 0; i < len; i++)
-		elements(tab[i]);
+	for (unsigned int i = 0; i < len; i++)
+		function(tab[i]);
+	return ;
 }
 
 #endif

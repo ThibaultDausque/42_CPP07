@@ -16,7 +16,7 @@ int	main(void)
 		std::cout << tab_nb[5] << std::endl;
 		std::cout << std::endl;
 		std::cout << "--- OUT OF RANGE ---" << std::endl;
-		std::cout << tab_nb[11] << std::endl;
+		std::cout << tab_nb[-5] << std::endl;
 		std::cout << std::endl;
 	}
 	catch (const std::exception& e)
