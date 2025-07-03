@@ -2,13 +2,14 @@
 
 int	main(void)
 {
-	Array<int> tab_nb(10);
-
-	for (unsigned int i = 0; i < tab_nb.size(); i++)
-		tab_nb[i] = i;
-
 	try
 	{
+		Array<int> tab_nb(10);
+		Array<int> empty_tab;
+
+		for (unsigned int i = 0; i < tab_nb.size(); i++)
+			tab_nb[i] = i;
+
 		std::cout << "--- SIZE ---" << std::endl;
 		std::cout << "tab_nb: " << tab_nb.size() << std::endl;
 		std::cout << std::endl;
@@ -21,7 +22,7 @@ int	main(void)
 	}
 	catch (const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	return 0;
 }

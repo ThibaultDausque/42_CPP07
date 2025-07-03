@@ -15,7 +15,7 @@ class Array
 		Array();
 		Array(const Array& cpy);
 		Array&	operator=(const Array& src);
-		Array(int size);
+		Array(unsigned int size);
 		~Array();
 		T&	operator[](int	idx);
 		unsigned int	size();

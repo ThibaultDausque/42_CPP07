@@ -2,12 +2,15 @@
 # define WHATEVER_HPP
 
 # include <iostream>
-# include <algorithm>
 
 template <typename T>
 void	swap(T& a, T& b)
 {
-	std::swap(a, b);
+	T	tmp;
+
+	tmp = a;
+	a = b;
+	b = tmp;
 }
 
 template <typename T>

@@ -4,9 +4,8 @@ template <typename T>
 Array<T>::Array()
 {
 	std::cout << "* empty tab created *" << std::endl;
-	this->_size = 0;
-	this->_tab = new T[1];
-	this->_tab[0] = 0;
+	std::cout << std::endl;
+	this->_tab = NULL;
 }
 
 template <typename T>
@@ -16,8 +15,10 @@ Array<T>::Array(const Array& cpy)
 }
 
 template <typename T>
-Array<T>::Array(int size)
+Array<T>::Array(unsigned int size)
 {
+	if (size < 0)
+		throw std::exception();
 	this->_size = size;
 	this->_tab = new T[size];
 }
@@ -44,7 +45,7 @@ template <typename T>
 T&	Array<T>::operator[](int idx)
 {
 	if (idx >= _size || idx < 0)
-		throw std::runtime_error("Out of range");
+		throw std::exception();
 	return _tab[idx];
 }
 

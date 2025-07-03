@@ -12,8 +12,12 @@ void	elements(T	x)
 template <typename T, typename F>
 void	iter(T* tab, unsigned int len, F function)
 {
+	if (len < 0)
+		return ;
 	for (unsigned int i = 0; i < len; i++)
+	{
 		function(tab[i]);
+	}
 	return ;
 }
 
