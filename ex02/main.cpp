@@ -25,3 +25,5 @@ int	main(void)
 	}
 	return 0;
 }
+
+//Elements must be accessible for reading and writing through the operator[] (or reading only if the instance is const).
